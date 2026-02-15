@@ -5,6 +5,7 @@ import {
   Header,
   ProfessionalSummary,
   WorkExperience,
+  Publications,
   EducationSection,
   Skills,
 } from "./components";
@@ -17,8 +18,16 @@ import {
  *  - Stacked single column on mobile / print.
  */
 export default function App() {
-  const { name, title, summary, contact, experience, education, skills } =
-    resumeData;
+  const {
+    name,
+    title,
+    summary,
+    contact,
+    experience,
+    education,
+    publications,
+    skills,
+  } = resumeData;
 
   return (
     <div className="page">
@@ -36,6 +45,7 @@ export default function App() {
           <aside>
             <Skills skills={skills} />
             <EducationSection education={education} />
+            <Publications publications={publications} />
           </aside>
         </div>
       </div>
