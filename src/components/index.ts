@@ -1,0 +1,8 @@
+// Erwin Lejeune - 2026-02-15
+
+export { Header } from "./Header";
+export { ProfessionalSummary } from "./ProfessionalSummary";
+export { WorkExperience } from "./WorkExperience";
+export { EducationSection } from "./EducationSection";
+export { Skills } from "./Skills";
+export { Section } from "./Section";
