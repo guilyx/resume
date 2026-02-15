@@ -6,6 +6,7 @@ Thanks for your interest in contributing! This document covers how to get set up
 
 - **Node 22** -- use [nvm](https://github.com/nvm-sh/nvm) and run `nvm use` in the project root (the `.nvmrc` file handles the rest).
 - **npm** -- ships with Node.
+- **[pre-commit](https://pre-commit.com/)** -- install with `pip install pre-commit`.
 
 ## Getting started
 
@@ -14,6 +15,7 @@ git clone <repo-url>
 cd resume
 nvm use
 npm install
+pre-commit install --hook-type pre-commit --hook-type commit-msg
 npm run dev
 ```
 
@@ -60,8 +62,8 @@ Layout issues, accessibility improvements, print rendering fixes -- all welcome.
 3. **Verify** everything works:
 
    ```bash
-   npm run lint      # no lint errors
-   npm run build     # production build succeeds
+   pre-commit run --all-files  # all hooks pass
+   npm run build               # production build succeeds
    ```
 
    Also visually check the page in the browser (`npm run dev`) and the print preview (`Ctrl+P`).

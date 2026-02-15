@@ -1,0 +1,43 @@
+# Erwin Lejeune - 2026-02-15
+#
+# Install: pip install pre-commit && pre-commit install --hook-type pre-commit --hook-type commit-msg
+# Run all: pre-commit run --all-files
+
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v6.0.0
+    hooks:
+      - id: trailing-whitespace
+      - id: end-of-file-fixer
+      - id: check-merge-conflict
+      - id: check-yaml
+      - id: check-json
+        exclude: ^tsconfig.*\.json$
+
+  - repo: local
+    hooks:
+      - id: prettier
+        name: prettier
+        entry: npx prettier --check
+        language: system
+        files: \.(ts|tsx|js|json|css|html|md)$
+
+      - id: eslint
+        name: eslint
+        entry: npx eslint
+        language: system
+        files: \.(ts|tsx)$
+
+      - id: typecheck
+        name: typecheck
+        entry: bash -c 'npx tsc -b --noEmit'
+        language: system
+        files: \.(ts|tsx)$
+        pass_filenames: false
+
+      - id: commitlint
+        name: commitlint
+        entry: npx commitlint --edit
+        language: system
+        stages: [commit-msg]
+        always_run: true

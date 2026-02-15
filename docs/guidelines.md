@@ -64,6 +64,21 @@ Keep commits granular -- one logical change per commit.
 - Always install the **latest** version via `npm install <package>`.
 - Dev dependencies (`-D`) for anything not needed at runtime.
 
+## Pre-commit hooks
+
+This project uses [pre-commit](https://pre-commit.com/) to enforce code quality on every commit. After cloning, install hooks with:
+
+```bash
+pip install pre-commit
+pre-commit install --hook-type pre-commit --hook-type commit-msg
+```
+
+The hooks run Prettier, ESLint, TypeScript type-checking, and commitlint automatically. You can run all hooks manually at any time:
+
+```bash
+pre-commit run --all-files
+```
+
 ## Testing changes
 
 ```bash

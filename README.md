@@ -11,6 +11,9 @@ nvm use 22
 # Install dependencies
 npm install
 
+# Install pre-commit hooks (requires: pip install pre-commit)
+pre-commit install --hook-type pre-commit --hook-type commit-msg
+
 # Start dev server
 npm run dev
 
