@@ -1,73 +1,111 @@
-# React + TypeScript + Vite
+# Resume
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A single-page, statically generated resume built with React, TypeScript, Tailwind CSS v4, and Vite. Designed to look like an A4 sheet of paper, fully responsive on mobile, and deployable to [Vercel](https://vercel.com) (or any static hosting) in one click.
 
-Currently, two official plugins are available:
+## Quick Start
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+```bash
+# Use Node 22
+nvm use 22
 
-## React Compiler
+# Install dependencies
+npm install
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+# Start dev server
+npm run dev
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+# Production build (outputs to dist/)
+npm run build
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Customising Your Resume
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+All resume content lives in **one file**: [`src/data/resume.ts`](src/data/resume.ts).
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+Edit that file to change your name, title, summary, work experience, education, publications, skills, and contact info. The TypeScript types in [`src/types/resume.ts`](src/types/resume.ts) ensure you can't accidentally break the structure -- your editor will guide you.
+
+### Adding a new work experience
+
+Add an entry to the `experience` array:
+
+```ts
+{
+  company: "Acme Corp",
+  companyUrl: "https://acme.com",   // optional -- makes the name a link
+  location: "Paris",                // optional
+  role: "Senior Engineer",
+  period: "2024 - Present",
+  promotions: "Promoted in 2025",   // optional
+  bullets: [
+    { text: "Led migration to microservices." },
+  ],
+}
 ```
+
+### Adding a publication
+
+Add an entry to the `publications` array:
+
+```ts
+{
+  title: "My Great Paper",
+  venue: "IEEE ICRA 2026",
+  date: "May 2026",
+  url: "https://doi.org/...",  // optional -- makes the title a link
+}
+```
+
+### Adding a new section
+
+1. Define a type in `src/types/resume.ts` and add the field to `ResumeData`.
+2. Create a component in `src/components/` (use `Section` as a wrapper for consistent styling).
+3. Export it from `src/components/index.ts`.
+4. Drop it into `src/App.tsx`.
+
+## Project Structure
+
+```
+src/
+├── types/resume.ts          # TypeScript interfaces for all resume data
+├── data/resume.ts           # Single source of truth for CV content
+├── components/
+│   ├── index.ts             # Barrel export
+│   ├── Section.tsx          # Reusable section wrapper (heading + divider)
+│   ├── Header.tsx           # Name, title, contact links
+│   ├── ProfessionalSummary.tsx
+│   ├── WorkExperience.tsx   # Job entries with bullets and promotions
+│   ├── Publications.tsx     # Condensed academic publications
+│   ├── EducationSection.tsx # Degree entries
+│   └── Skills.tsx           # Skill pills grouped by category
+├── App.tsx                  # Page layout (two-column on desktop, stacked on mobile)
+├── main.tsx                 # React entry point
+└── index.css                # Tailwind v4 theme tokens and base styles
+```
+
+## Deploy to Vercel
+
+1. Push this repository to GitHub.
+2. Import it in [Vercel](https://vercel.com/new).
+3. Vercel auto-detects Vite -- no configuration needed.
+4. Every push to `main` triggers a new deploy.
+
+Alternatively, deploy manually:
+
+```bash
+npm run build
+npx vercel --prod
+```
+
+## Tech Stack
+
+| Layer     | Tool                  |
+| --------- | --------------------- |
+| Framework | React 19              |
+| Language  | TypeScript 5          |
+| Styling   | Tailwind CSS v4       |
+| Bundler   | Vite 7                |
+| Runtime   | Node 22               |
+
+## License
+
+This project is licensed under the [MIT License](LICENSE).
