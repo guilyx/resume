@@ -1,6 +1,7 @@
 // Erwin Lejeune - 2026-02-15
 
 import type { ReactNode } from "react";
+import { Mail, Globe, MapPin, Github, Linkedin } from "lucide-react";
 import type { ContactInfo } from "../types/resume";
 
 interface HeaderProps {
@@ -12,13 +13,19 @@ interface HeaderProps {
 /** Top section of the resume: name, title, and contact links. */
 export function Header({ name, title, contact }: HeaderProps) {
   const linkClass = "hover:text-accent transition-colors";
+  const iconSize = 13;
 
   // Build contact items dynamically so we only render what exists.
   const items: ReactNode[] = [];
 
   if (contact.email) {
     items.push(
-      <a key="email" href={`mailto:${contact.email}`} className={linkClass}>
+      <a
+        key="email"
+        href={`mailto:${contact.email}`}
+        className={`inline-flex items-center gap-1 ${linkClass}`}
+      >
+        <Mail size={iconSize} className="shrink-0" />
         {contact.email}
       </a>,
     );
@@ -30,8 +37,9 @@ export function Header({ name, title, contact }: HeaderProps) {
         href={contact.portfolio}
         target="_blank"
         rel="noopener noreferrer"
-        className={linkClass}
+        className={`inline-flex items-center gap-1 ${linkClass}`}
       >
+        <Globe size={iconSize} className="shrink-0" />
         {contact.portfolio.replace(/^https?:\/\//, "")}
       </a>,
     );
@@ -43,9 +51,10 @@ export function Header({ name, title, contact }: HeaderProps) {
         href={`https://github.com/${contact.github}`}
         target="_blank"
         rel="noopener noreferrer"
-        className={linkClass}
+        className={`inline-flex items-center gap-1 ${linkClass}`}
       >
-        github.com/{contact.github}
+        <Github size={iconSize} className="shrink-0" />
+        {contact.github}
       </a>,
     );
   }
@@ -56,14 +65,20 @@ export function Header({ name, title, contact }: HeaderProps) {
         href={`https://linkedin.com/in/${contact.linkedin}`}
         target="_blank"
         rel="noopener noreferrer"
-        className={linkClass}
+        className={`inline-flex items-center gap-1 ${linkClass}`}
       >
-        linkedin.com/in/{contact.linkedin}
+        <Linkedin size={iconSize} className="shrink-0" />
+        {contact.linkedin}
       </a>,
     );
   }
   if (contact.location) {
-    items.push(<span key="location">{contact.location}</span>);
+    items.push(
+      <span key="location" className="inline-flex items-center gap-1">
+        <MapPin size={iconSize} className="shrink-0" />
+        {contact.location}
+      </span>,
+    );
   }
 
   return (
