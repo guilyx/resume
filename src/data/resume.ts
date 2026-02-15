@@ -103,19 +103,19 @@ export const resumeData: ResumeData = {
       title: "Decentralized Acceleration-Based Bird-Inspired Flocking",
       venue: "IEEE/RSJ IROS 2024",
       date: "October 2024",
-      url: "https://www.elejeune.me/",
+      url: "https://www.researchgate.net/publication/387418977_Decentralized_Acceleration-Based_Bird-Inspired_Flocking",
     },
     {
       title: "Real-time Jitter Measurements under ROS2: the Inverted Pendulum Case",
       venue: "MDPI Robotics, 2021",
       date: "March 2021",
-      url: "https://www.elejeune.me/",
+      url: "https://www.researchgate.net/publication/350353690_Real-time_Jitter_Measurements_under_ROS2_the_Inverted_Pendulum_case",
     },
     {
       title: "Survey of the Multi-Agent Pathfinding Solutions",
       venue: "Preprint, 2021",
       date: "January 2021",
-      url: "https://www.elejeune.me/",
+      url: "https://www.researchgate.net/publication/348716625_Survey_of_the_Multi-Agent_Pathfinding_Solutions",
     },
   ],
 
