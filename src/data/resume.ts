@@ -47,6 +47,7 @@ export const resumeData: ResumeData = {
     },
     {
       company: "Coalescent Mobile Robotics",
+      companyUrl: "https://cm-robotics.com/",
       role: "Founding Robotics Engineer",
       period: "2021 - 2022",
       bullets: [
