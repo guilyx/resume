@@ -21,7 +21,18 @@ function ExperienceEntry({ entry }: { entry: Experience }) {
       </div>
 
       <p className="text-xs text-muted mt-0.5">
-        {entry.company}
+        {entry.companyUrl ? (
+          <a
+            href={entry.companyUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-accent transition-colors"
+          >
+            {entry.company}
+          </a>
+        ) : (
+          entry.company
+        )}
         {entry.location ? `, ${entry.location}` : ""}
       </p>
 

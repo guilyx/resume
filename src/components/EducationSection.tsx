@@ -22,7 +22,20 @@ export function EducationSection({ education }: EducationSectionProps) {
                 {entry.period}
               </span>
             </div>
-            <p className="text-xs text-muted mt-0.5">{entry.institution}</p>
+            <p className="text-xs text-muted mt-0.5">
+              {entry.institutionUrl ? (
+                <a
+                  href={entry.institutionUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-accent transition-colors"
+                >
+                  {entry.institution}
+                </a>
+              ) : (
+                entry.institution
+              )}
+            </p>
           </div>
         ))}
       </div>
