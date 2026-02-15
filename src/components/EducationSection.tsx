@@ -1,6 +1,7 @@
 // Erwin Lejeune - 2026-02-15
 
 import type { Education } from "../types/resume";
+import { Favicon } from "./Favicon";
 import { Section } from "./Section";
 
 interface EducationSectionProps {
@@ -22,7 +23,10 @@ export function EducationSection({ education }: EducationSectionProps) {
                 {entry.period}
               </span>
             </div>
-            <p className="text-xs text-muted mt-0.5">
+            <p className="text-xs text-muted mt-0.5 inline-flex items-center gap-1.5">
+              {entry.institutionUrl && (
+                <Favicon url={entry.institutionUrl} size={13} />
+              )}
               {entry.institutionUrl ? (
                 <a
                   href={entry.institutionUrl}

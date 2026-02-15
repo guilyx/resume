@@ -1,6 +1,7 @@
 // Erwin Lejeune - 2026-02-15
 
 import type { Experience } from "../types/resume";
+import { Favicon } from "./Favicon";
 import { Section } from "./Section";
 
 interface WorkExperienceProps {
@@ -20,7 +21,8 @@ function ExperienceEntry({ entry }: { entry: Experience }) {
         </span>
       </div>
 
-      <p className="text-xs text-muted mt-0.5">
+      <p className="text-xs text-muted mt-0.5 inline-flex items-center gap-1.5 flex-wrap">
+        {entry.companyUrl && <Favicon url={entry.companyUrl} size={13} />}
         {entry.companyUrl ? (
           <a
             href={entry.companyUrl}
@@ -31,9 +33,9 @@ function ExperienceEntry({ entry }: { entry: Experience }) {
             {entry.company}
           </a>
         ) : (
-          entry.company
+          <span>{entry.company}</span>
         )}
-        {entry.location ? `, ${entry.location}` : ""}
+        {entry.location && <span>, {entry.location}</span>}
       </p>
 
       {entry.promotions && (
