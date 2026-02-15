@@ -33,6 +33,7 @@ export const resumeData: ResumeData = {
     },
     {
       company: "Unchained Labs",
+      companyUrl: "https://unchainlabs.xyz/",
       role: "Principal Solutions Engineer",
       period: "2024 - Present",
       bullets: [
@@ -85,6 +86,7 @@ export const resumeData: ResumeData = {
     {
       degree: "M.Sc. - Computer Engineering & Aeronautics",
       institution: "Ynov Bordeaux",
+      institutionUrl: "https://www.ynov.com/campus/bordeaux",
       period: "2018 - 2019",
     },
     {
