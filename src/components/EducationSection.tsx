@@ -16,17 +16,11 @@ export function EducationSection({ education }: EducationSectionProps) {
         {education.map((entry, idx) => (
           <div key={idx}>
             <div className="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-0.5">
-              <h3 className="text-sm font-semibold text-primary">
-                {entry.degree}
-              </h3>
-              <span className="text-xs text-muted whitespace-nowrap">
-                {entry.period}
-              </span>
+              <h3 className="text-sm font-semibold text-primary">{entry.degree}</h3>
+              <span className="text-xs text-muted whitespace-nowrap">{entry.period}</span>
             </div>
             <p className="text-xs text-muted mt-0.5 inline-flex items-center gap-1.5">
-              {entry.institutionUrl && (
-                <Favicon url={entry.institutionUrl} size={13} />
-              )}
+              {entry.institutionUrl && <Favicon url={entry.institutionUrl} size={13} />}
               {entry.institutionUrl ? (
                 <a
                   href={entry.institutionUrl}

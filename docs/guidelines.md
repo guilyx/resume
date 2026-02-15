@@ -13,7 +13,7 @@ components/  -->  render data (pure presentational components)
 App.tsx  -->  compose components into a page layout
 ```
 
-Changes to resume *content* should **never** require editing a component. Changes to *presentation* should **never** require editing the data file.
+Changes to resume _content_ should **never** require editing a component. Changes to _presentation_ should **never** require editing the data file.
 
 ## Component conventions
 
@@ -38,12 +38,12 @@ Changes to resume *content* should **never** require editing a component. Change
 
 ## File naming
 
-| Kind       | Convention            | Example                    |
-| ---------- | --------------------- | -------------------------- |
-| Component  | PascalCase `.tsx`     | `WorkExperience.tsx`       |
-| Type file  | camelCase `.ts`       | `resume.ts`                |
-| Data file  | camelCase `.ts`       | `resume.ts`                |
-| Docs       | kebab-case `.md`      | `theming.md`               |
+| Kind      | Convention        | Example              |
+| --------- | ----------------- | -------------------- |
+| Component | PascalCase `.tsx` | `WorkExperience.tsx` |
+| Type file | camelCase `.ts`   | `resume.ts`          |
+| Data file | camelCase `.ts`   | `resume.ts`          |
+| Docs      | kebab-case `.md`  | `theming.md`         |
 
 ## Commits
 

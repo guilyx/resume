@@ -98,13 +98,13 @@ npx vercel --prod
 
 ## Tech Stack
 
-| Layer     | Tool                  |
-| --------- | --------------------- |
-| Framework | React 19              |
-| Language  | TypeScript 5          |
-| Styling   | Tailwind CSS v4       |
-| Bundler   | Vite 7                |
-| Runtime   | Node 22               |
+| Layer     | Tool            |
+| --------- | --------------- |
+| Framework | React 19        |
+| Language  | TypeScript 5    |
+| Styling   | Tailwind CSS v4 |
+| Bundler   | Vite 7          |
+| Runtime   | Node 22         |
 
 ## Documentation
 

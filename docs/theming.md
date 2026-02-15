@@ -24,14 +24,14 @@ Open `src/index.css` and look for the `@theme` block:
 
 Each token maps to a Tailwind utility class that is used throughout every component:
 
-| Token              | Tailwind class        | Where it's used                                   |
-| ------------------ | --------------------- | ------------------------------------------------- |
-| `--color-primary`  | `text-primary`        | Headings, body text                               |
-| `--color-accent`   | `text-accent`         | Section headings, bullet markers, links on hover   |
-| `--color-muted`    | `text-muted`          | Dates, subtitles, secondary text                   |
-| `--color-surface`  | `bg-surface`          | Skill pill backgrounds                             |
-| `--color-divider`  | `border-divider`      | Section dividers, skill pill borders, separators    |
-| `--color-page-bg`  | `bg-page-bg`          | Page background behind the A4 paper (desktop only) |
+| Token             | Tailwind class   | Where it's used                                    |
+| ----------------- | ---------------- | -------------------------------------------------- |
+| `--color-primary` | `text-primary`   | Headings, body text                                |
+| `--color-accent`  | `text-accent`    | Section headings, bullet markers, links on hover   |
+| `--color-muted`   | `text-muted`     | Dates, subtitles, secondary text                   |
+| `--color-surface` | `bg-surface`     | Skill pill backgrounds                             |
+| `--color-divider` | `border-divider` | Section dividers, skill pill borders, separators   |
+| `--color-page-bg` | `bg-page-bg`     | Page background behind the A4 paper (desktop only) |
 
 ## Changing the accent colour
 
@@ -54,7 +54,7 @@ Save the file -- Vite hot-reloads instantly and every section heading, bullet po
 The grey area behind the paper is controlled by `--color-page-bg`. Set it to any colour:
 
 ```css
---color-page-bg: #0f172a;  /* dark background */
+--color-page-bg: #0f172a; /* dark background */
 ```
 
 On mobile the background is hidden (the white page fills the viewport), so this only affects desktop and tablet views.

@@ -18,16 +18,8 @@ import {
  *  - Stacked single column on mobile / print.
  */
 export default function App() {
-  const {
-    name,
-    title,
-    summary,
-    contact,
-    experience,
-    education,
-    publications,
-    skills,
-  } = resumeData;
+  const { name, title, summary, contact, experience, education, publications, skills } =
+    resumeData;
 
   return (
     <div className="page">
