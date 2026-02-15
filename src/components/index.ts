@@ -1,5 +1,6 @@
 // Erwin Lejeune - 2026-02-15
 
+export { Favicon } from "./Favicon";
 export { Header } from "./Header";
 export { ProfessionalSummary } from "./ProfessionalSummary";
 export { WorkExperience } from "./WorkExperience";
