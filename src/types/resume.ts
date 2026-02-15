@@ -17,6 +17,7 @@ export interface ExperienceBullet {
 /** A single work experience entry. */
 export interface Experience {
   company: string;
+  companyUrl?: string;
   location?: string;
   role: string;
   period: string;
@@ -28,7 +29,16 @@ export interface Experience {
 export interface Education {
   degree: string;
   institution: string;
+  institutionUrl?: string;
   period: string;
+}
+
+/** A published paper, article, or conference contribution. */
+export interface Publication {
+  title: string;
+  venue: string;
+  date: string;
+  url?: string;
 }
 
 /** A group of related skills (e.g. "Software Engineering"). */
@@ -45,5 +55,6 @@ export interface ResumeData {
   contact: ContactInfo;
   experience: Experience[];
   education: Education[];
+  publications: Publication[];
   skills: SkillGroup[];
 }

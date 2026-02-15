@@ -16,10 +16,12 @@ export const resumeData: ResumeData = {
   experience: [
     {
       company: "Technology Innovation Institute",
+      companyUrl: "https://www.tii.ae/",
       location: "Abu Dhabi",
       role: "Lead Robotics Engineer",
       period: "2022 - Present",
-      promotions: "Engineer to Senior Engineer (2023), Senior Engineer to Lead Engineer (2026)",
+      promotions:
+        "Engineer to Senior Engineer (2023), Senior Engineer to Lead Engineer (2026)",
       bullets: [
         {
           text: "Leading a Robotics Software team of 9 engineers developing decentralized autonomy frameworks for heterogeneous drone swarms. Subjects span across Autonomy (Navigation, Perception, Orchestration), Infrastructure (DevOps, RobotOps), and Integration of software and firmware into real-world platforms.",
@@ -77,6 +79,7 @@ export const resumeData: ResumeData = {
     {
       degree: "M.Sc. - Control & Robotics",
       institution: "Ecole Centrale de Nantes",
+      institutionUrl: "https://www.ec-nantes.fr/",
       period: "2019 - 2021",
     },
     {
@@ -87,7 +90,29 @@ export const resumeData: ResumeData = {
     {
       degree: "B.Sc. - Electronics Engineering",
       institution: "Nantes Université",
+      institutionUrl: "https://www.univ-nantes.fr/",
       period: "2014 - 2018",
+    },
+  ],
+
+  publications: [
+    {
+      title: "Decentralized Acceleration-Based Bird-Inspired Flocking",
+      venue: "IEEE/RSJ IROS 2024",
+      date: "October 2024",
+      url: "https://www.elejeune.me/",
+    },
+    {
+      title: "Real-time Jitter Measurements under ROS2: the Inverted Pendulum Case",
+      venue: "MDPI Robotics, 2021",
+      date: "March 2021",
+      url: "https://www.elejeune.me/",
+    },
+    {
+      title: "Survey of the Multi-Agent Pathfinding Solutions",
+      venue: "Preprint, 2021",
+      date: "January 2021",
+      url: "https://www.elejeune.me/",
     },
   ],
 
