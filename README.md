@@ -106,6 +106,12 @@ npx vercel --prod
 | Bundler   | Vite 7                |
 | Runtime   | Node 22               |
 
+## Documentation
+
+- [Theming & Colour Customisation](docs/theming.md) -- how to change the accent colour, background, fonts, and swap the entire palette.
+- [Project Guidelines](docs/guidelines.md) -- architecture, component conventions, styling rules, commit format.
+- [Contributing](CONTRIBUTING.md) -- how to set up, what to work on, and how to submit a PR.
+
 ## License
 
 This project is licensed under the [MIT License](LICENSE).
