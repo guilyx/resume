@@ -63,15 +63,61 @@ export const resumeData: ResumeData = {
       ],
     },
     {
-      company: "Hiventive, Ecole Centrale Nantes, Ingeniarius",
-      role: "Software, Robotics & Research Engineer",
-      period: "2018 - 2021",
+      company: "Hiventive",
+      role: "Software Engineer",
+      location: "Remote",
+      period: "Jun 2020 - Feb 2021",
       bullets: [
         {
-          text: "Developed backend systems and ROS2 software across robotics and web platforms using Go, Python, and TypeScript.",
+          text: "Built core backend services in Golang with PostgreSQL and Docker for a web-based computer-aided production engineering platform.",
         },
         {
-          text: "Delivered multi-agent autonomy, AI planning, and real-time control solutions with Dockerized, CI/CD-ready deployments.",
+          text: "Developed automated programming test manager for candidate evaluation.",
+        },
+      ],
+    },
+    {
+      company: "Ecole Centrale de Nantes",
+      companyUrl: "https://www.ec-nantes.fr/",
+      role: "Robotics Researcher",
+      location: "Nantes, France",
+      period: "Mar 2020 - Feb 2021",
+      bullets: [
+        {
+          text: "Led 4 projects on multi-agent pathfinding, AI planning (PDDL), real-time ROS control (Xenomai/XDDP), and ROS2 latency benchmarking.",
+        },
+      ],
+    },
+    {
+      company: "Ingeniarius",
+      role: "Robotics Assistant",
+      location: "Coimbra, Portugal",
+      period: "Jul 2019 - Sep 2019",
+      bullets: [
+        {
+          text: "Built full autonomy stacks from scratch using ROS and embedded systems. Won mapped and unmapped maze-solving competitions.",
+        },
+      ],
+    },
+    {
+      company: "Hiventive",
+      role: "Embedded Software Engineer",
+      location: "Bordeaux, France",
+      period: "Sep 2018 - Jul 2019",
+      bullets: [
+        {
+          text: "Developed SystemC/TLM virtual prototype of STM32 microcontroller for SoC emulation, emulating peripherals (TIM, I2C, CAN, GPIO, USART) with QEMU integration.",
+        },
+      ],
+    },
+    {
+      company: "Polytech Nantes (LS2N)",
+      role: "Robotics Intern",
+      location: "Nantes, France",
+      period: "May 2018 - Jul 2018",
+      bullets: [
+        {
+          text: "Built TurtleBot3 platform and developed WiFi mesh RSSI-based triangulation algorithm for indoor localization.",
         },
       ],
     },
