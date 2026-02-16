@@ -27,6 +27,8 @@ export function DownloadButton({ name }: DownloadButtonProps) {
     setGenerating(true);
     try {
       await generateResumePdf(page, toResumeFilename(name));
+    } catch (error) {
+      console.error("[DownloadButton] PDF generation failed:", error);
     } finally {
       setGenerating(false);
     }
