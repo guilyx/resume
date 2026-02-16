@@ -137,6 +137,4 @@ export const resumeData: ResumeData = {
       items: ["Scrum", "Jira", "Github", "Gitlab"],
     },
   ],
-
-  pdfUrl: "/resume.pdf",
 };
