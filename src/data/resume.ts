@@ -157,7 +157,7 @@ export const resumeData: ResumeData = {
     },
     {
       title: "Real-time Jitter Measurements under ROS2: the Inverted Pendulum Case",
-      venue: "MDPI Robotics, 2021",
+      venue: "Preprint, 2021",
       date: "March 2021",
       url: "https://www.researchgate.net/publication/350353690_Real-time_Jitter_Measurements_under_ROS2_the_Inverted_Pendulum_case",
     },
