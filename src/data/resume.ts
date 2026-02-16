@@ -64,6 +64,7 @@ export const resumeData: ResumeData = {
     },
     {
       company: "Hiventive",
+      companyUrl: "https://www.hiventive.com/en/",
       role: "Software Engineer",
       location: "Remote",
       period: "Jun 2020 - Feb 2021",
@@ -90,6 +91,7 @@ export const resumeData: ResumeData = {
     },
     {
       company: "Ingeniarius",
+      companyUrl: "https://ingeniarius.pt/",
       role: "Robotics Assistant",
       location: "Coimbra, Portugal",
       period: "Jul 2019 - Sep 2019",
@@ -101,6 +103,7 @@ export const resumeData: ResumeData = {
     },
     {
       company: "Hiventive",
+      companyUrl: "https://www.hiventive.com/en/",
       role: "Embedded Software Engineer",
       location: "Bordeaux, France",
       period: "Sep 2018 - Jul 2019",
@@ -112,6 +115,7 @@ export const resumeData: ResumeData = {
     },
     {
       company: "Polytech Nantes (LS2N)",
+      companyUrl: "https://www.ls2n.fr/",
       role: "Robotics Intern",
       location: "Nantes, France",
       period: "May 2018 - Jul 2018",
