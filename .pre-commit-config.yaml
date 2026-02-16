@@ -3,6 +3,11 @@
 # Install: pip install pre-commit && pre-commit install --hook-type pre-commit --hook-type commit-msg
 # Run all: pre-commit run --all-files
 
+# Ensures nvm-managed Node is available for local hooks.
+# If you don't use nvm, remove the NVM_SOURCE line from each entry.
+default_language_version:
+  node: "22"
+
 repos:
   - repo: https://github.com/pre-commit/pre-commit-hooks
     rev: v6.0.0
@@ -18,26 +23,26 @@ repos:
     hooks:
       - id: prettier
         name: prettier
-        entry: npx prettier --check
+        entry: bash -c 'export NVM_DIR="$HOME/.nvm" && [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" && npx prettier --check "$@"' --
         language: system
         files: \.(ts|tsx|js|json|css|html|md)$
 
       - id: eslint
         name: eslint
-        entry: npx eslint
+        entry: bash -c 'export NVM_DIR="$HOME/.nvm" && [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" && npx eslint "$@"' --
         language: system
         files: \.(ts|tsx)$
 
       - id: typecheck
         name: typecheck
-        entry: bash -c 'npx tsc -b --noEmit'
+        entry: bash -c 'export NVM_DIR="$HOME/.nvm" && [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" && npx tsc -b --noEmit'
         language: system
         files: \.(ts|tsx)$
         pass_filenames: false
 
       - id: commitlint
         name: commitlint
-        entry: npx commitlint --edit
+        entry: bash -c 'export NVM_DIR="$HOME/.nvm" && [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" && npx commitlint --edit "$@"' --
         language: system
         stages: [commit-msg]
         always_run: true
