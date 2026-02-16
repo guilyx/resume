@@ -53,7 +53,7 @@ export default function App() {
         <div className="px-5 py-8 sm:px-10 sm:py-10 md:px-14 md:py-12">
           <Header name={name} title={title} contact={contact} />
 
-          <div className="grid grid-cols-1 md:grid-cols-[1fr_240px] gap-x-10 gap-y-2">
+          <div className="grid grid-cols-1 md:grid-cols-[1fr_312px] gap-x-10 gap-y-2">
             {/* ---- Main column ---- */}
             <div>
               <ProfessionalSummary summary={summary} />
