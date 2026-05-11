@@ -59,13 +59,10 @@ export const resumeData: ResumeData = {
       visible: true,
       bullets: [
         {
-          text: "Developed Agentic AI tools for automated documentation PRs, [agentic orchestration](https://kymatics.vercel.app/), agentic contribution analysis, real-estate analysis & UAE defense data analysis.",
+          text: "Developed Agentic AI tools for [automated documentation PRs](https://doxmosis.vercel.app/), [agentic orchestration](https://kymatics.vercel.app/), agentic contribution analysis, real-estate analysis & UAE defense data analysis.",
         },
         {
           text: "Developed production backend services for [LoopFi](https://loopfi.xyz/)'s blockchain data analysis on EVM chains.",
-        },
-        {
-          text: "Developed AI Agents for stock, crypto, prediction market analysis and arbitrage research.",
         },
       ],
     },
@@ -80,10 +77,7 @@ export const resumeData: ResumeData = {
           text: "Founding core technical team that delivered the first working in-store robot system, supporting company milestones across pre-seed and seed rounds.",
         },
         {
-          text: "Led development of navigation stack: path planning, motion control, and localization.",
-        },
-        {
-          text: "Contributed to perception (detection, filtering, tracking) and sensor fusion (EKF with odometry + IMU).",
+          text: "Led development of navigation stack: path planning, motion control, and localization. Contributed to perception (detection, filtering, tracking)",
         },
       ],
     },
