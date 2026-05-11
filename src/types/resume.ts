@@ -23,6 +23,8 @@ export interface Experience {
   period: string;
   bullets: ExperienceBullet[];
   promotions?: string;
+  /** When false, omitted from rendered resume. Defaults to true if unset. */
+  visible?: boolean;
 }
 
 /** An academic degree or certificate. */

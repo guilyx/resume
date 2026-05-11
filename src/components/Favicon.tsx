@@ -11,22 +11,24 @@ interface FaviconProps {
 }
 
 /**
- * Fetches and displays a website's favicon using Google's public favicon API.
+ * Fetches and displays a website's favicon via Google's faviconV2 service using
+ * the full page URL (not domain-only). Domain-only lookups often downgrade to
+ * `http://` and miss modern sites' icons (e.g. sirb.ai), which then fails `onError`.
  * Gracefully hides itself if the image fails to load.
  */
 export function Favicon({ url, size = 14, className = "" }: FaviconProps) {
   const [hidden, setHidden] = useState(false);
 
-  let domain: string;
   try {
-    domain = new URL(url).hostname;
+    new URL(url);
   } catch {
     return null;
   }
 
   if (hidden) return null;
 
-  const src = `https://www.google.com/s2/favicons?domain=${domain}&sz=${size * 2}`;
+  const pixelSize = size * 2;
+  const src = `https://t0.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=${encodeURIComponent(url)}&size=${pixelSize}`;
 
   return (
     <img

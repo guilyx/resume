@@ -15,11 +15,31 @@ export const resumeData: ResumeData = {
 
   experience: [
     {
+      company: "SIRB.AI",
+      companyUrl: "https://sirb.ai/",
+      location: "Abu Dhabi",
+      role: "Lead Robotics Engineer",
+      period: "2026 - Present",
+      visible: true,
+      bullets: [
+        {
+          text: "Lead the autonomy team at a defense-technology startup spun off from Technology Innovation Institute (TII).",
+        },
+        {
+          text: "Agentic generation of missions for surveillance, monitoring, and tail chasing.",
+        },
+        {
+          text: "Architecture and algorithm development for decentralized swarm control and multi-agent planning.",
+        },
+      ],
+    },
+    {
       company: "Technology Innovation Institute",
       companyUrl: "https://www.tii.ae/",
       location: "Abu Dhabi",
       role: "Lead Robotics Engineer",
       period: "2022 - Present",
+      visible: true,
       promotions:
         "Engineer to Senior Engineer (2023), Senior Engineer to Lead Engineer (2026)",
       bullets: [
@@ -36,6 +56,7 @@ export const resumeData: ResumeData = {
       companyUrl: "https://unchainlabs.xyz/",
       role: "Principal Solutions Engineer",
       period: "2024 - Present",
+      visible: true,
       bullets: [
         {
           text: "Developed Agentic AI tools for automated documentation PRs, [agentic orchestration](https://kymatics.vercel.app/), agentic contribution analysis, real-estate analysis & UAE defense data analysis.",
@@ -53,6 +74,7 @@ export const resumeData: ResumeData = {
       companyUrl: "https://cm-robotics.com/",
       role: "Founding Robotics Engineer",
       period: "2021 - 2022",
+      visible: true,
       bullets: [
         {
           text: "Founding core technical team that delivered the first working in-store robot system, supporting company milestones across pre-seed and seed rounds.",
@@ -71,6 +93,7 @@ export const resumeData: ResumeData = {
       role: "Software Engineer",
       location: "Remote",
       period: "Jun 2020 - Feb 2021",
+      visible: true,
       bullets: [
         {
           text: "Built core backend services in Golang with PostgreSQL and Docker for a web-based computer-aided production engineering platform.",
@@ -86,6 +109,7 @@ export const resumeData: ResumeData = {
       role: "Robotics Researcher",
       location: "Nantes, France",
       period: "Mar 2020 - Feb 2021",
+      visible: true,
       bullets: [
         {
           text: "Led 4 projects on multi-agent pathfinding, AI planning (PDDL), real-time ROS control (Xenomai/XDDP), and ROS2 latency benchmarking.",
@@ -98,6 +122,7 @@ export const resumeData: ResumeData = {
       role: "Robotics Assistant",
       location: "Coimbra, Portugal",
       period: "Jul 2019 - Sep 2019",
+      visible: true,
       bullets: [
         {
           text: "Built full autonomy stacks from scratch using ROS and embedded systems. Won mapped and unmapped maze-solving competitions.",
@@ -110,6 +135,7 @@ export const resumeData: ResumeData = {
       role: "Embedded Software Engineer",
       location: "Bordeaux, France",
       period: "Sep 2018 - Jul 2019",
+      visible: true,
       bullets: [
         {
           text: "Developed SystemC/TLM virtual prototype of STM32 microcontroller for SoC emulation, emulating peripherals (TIM, I2C, CAN, GPIO, USART) with QEMU integration.",
@@ -122,6 +148,7 @@ export const resumeData: ResumeData = {
       role: "Robotics Intern",
       location: "Nantes, France",
       period: "May 2018 - Jul 2018",
+      visible: false,
       bullets: [
         {
           text: "Built TurtleBot3 platform and developed WiFi mesh RSSI-based triangulation algorithm for indoor localization.",
