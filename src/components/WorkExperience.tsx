@@ -92,9 +92,11 @@ function ExperienceEntry({ entry }: { entry: Experience }) {
 
 /** Work experience section listing all positions in chronological order. */
 export function WorkExperience({ experience }: WorkExperienceProps) {
+  const visibleEntries = experience.filter((entry) => entry.visible !== false);
+
   return (
     <Section title="Work Experience">
-      {experience.map((entry, idx) => (
+      {visibleEntries.map((entry, idx) => (
         <ExperienceEntry key={idx} entry={entry} />
       ))}
     </Section>
