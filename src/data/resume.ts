@@ -4,9 +4,10 @@ import type { ResumeData } from "../types/resume";
 
 export const resumeData: ResumeData = {
   name: "Erwin Lejeune",
-  title: "Lead Software Engineer | Robotics, AI, Blockchain",
+  title:
+    "Lead Architect | Robot Autonomy, Agentic AI Orchestration, Multi-Agent Planning",
   summary:
-    "Software Engineer driving robotics autonomy, agentic AI, and blockchain-based platforms across domains. Experienced in C++, Python, Go. Active contributor to open-source projects and communities.",
+    "Lead Architect for robot autonomy and agentic AI orchestration: graph- and tree-based execution engines, multi-agent planning, and the agentic tooling built around them. Experienced in C++, Python, Go. Active contributor to open-source projects and communities.",
   contact: {
     email: "erwin.lejeune15@gmail.com",
     portfolio: "https://elejeune.me",
@@ -148,6 +149,41 @@ export const resumeData: ResumeData = {
           text: "Built TurtleBot3 platform and developed WiFi mesh RSSI-based triangulation algorithm for indoor localization.",
         },
       ],
+    },
+  ],
+
+  projects: [
+    {
+      name: "pymapf",
+      description:
+        "Multi-agent planning toolbox on arbitrary graphs: CBS, PIBT, LaCAM, MAPF-LNS, plus multi-agent RL.",
+      repoUrl: "https://github.com/APLA-Toolbox/pymapf",
+      liveUrl: "https://apla-toolbox.github.io/pymapf/",
+      visible: true,
+    },
+    {
+      name: "jupyddl",
+      description:
+        "Dependency-free Python PDDL framework: parser, grounder, 14 planners, LM-cut and FF heuristics.",
+      repoUrl: "https://github.com/APLA-Toolbox/PythonPDDL",
+      liveUrl: "https://apla-toolbox.github.io/PythonPDDL/",
+      visible: true,
+    },
+    {
+      name: "rostree",
+      description:
+        "ROS 2 dependency-graph explorer from the CLI, a TUI, or a self-contained interactive graph.",
+      repoUrl: "https://github.com/guilyx/rostree",
+      liveUrl: "https://guilyx.github.io/rostree/",
+      visible: true,
+    },
+    {
+      name: "autonomous-uav-guide",
+      description:
+        "Multirotor, fixed-wing and VTOL flight models with 40+ runnable simulations and an RL gym.",
+      repoUrl: "https://github.com/guilyx/autonomous-uav-guide",
+      liveUrl: "https://guilyx.github.io/autonomous-uav-guide/",
+      visible: true,
     },
   ],
 
