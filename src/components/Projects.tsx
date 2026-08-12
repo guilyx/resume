@@ -50,7 +50,7 @@ export function Projects({ projects }: ProjectsProps) {
                   href={secondaryUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-xs text-muted hover:text-accent transition-colors"
+                  className="text-xs text-accent/80 hover:text-accent transition-colors"
                 >
                   {toDisplayUrl(secondaryUrl)}
                 </a>
