@@ -35,6 +35,19 @@ export interface Education {
   period: string;
 }
 
+/** A personal or open-source project worth linking from the resume. */
+export interface Project {
+  name: string;
+  /** One-line summary of what the project does. */
+  description: string;
+  /** Source repository -- preferred as the primary link when both are set. */
+  repoUrl?: string;
+  /** Deployed page, shown alongside the repository when both exist. */
+  liveUrl?: string;
+  /** When false, omitted from rendered resume. Defaults to true if unset. */
+  visible?: boolean;
+}
+
 /** A published paper, article, or conference contribution. */
 export interface Publication {
   title: string;
@@ -56,6 +69,7 @@ export interface ResumeData {
   summary: string;
   contact: ContactInfo;
   experience: Experience[];
+  projects: Project[];
   education: Education[];
   publications: Publication[];
   skills: SkillGroup[];

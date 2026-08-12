@@ -4,9 +4,9 @@ import type { ResumeData } from "../types/resume";
 
 export const resumeData: ResumeData = {
   name: "Erwin Lejeune",
-  title: "Lead Software Engineer | Robotics, AI, Blockchain",
+  title: "Lead Architect | Robot Autonomy, Agentic AI, Swarm Systems",
   summary:
-    "Software Engineer driving robotics autonomy, agentic AI, and blockchain-based platforms across domains. Experienced in C++, Python, Go. Active contributor to open-source projects and communities.",
+    "Lead Architect for robot autonomy and agentic AI, building decentralized swarm systems for heterogeneous drone fleets alongside agentic tooling and blockchain-based platforms. Experienced in C++, Python, Go. Active contributor to open-source projects and communities.",
   contact: {
     email: "erwin.lejeune15@gmail.com",
     portfolio: "https://elejeune.me",
@@ -148,6 +148,37 @@ export const resumeData: ResumeData = {
           text: "Built TurtleBot3 platform and developed WiFi mesh RSSI-based triangulation algorithm for indoor localization.",
         },
       ],
+    },
+  ],
+
+  projects: [
+    {
+      name: "t212-mcp",
+      description:
+        "MCP server exposing read-only Trading 212 portfolio data to AI assistants.",
+      repoUrl: "https://github.com/guilyx/t212-mcp",
+      visible: true,
+    },
+    {
+      name: "setup",
+      description:
+        "One-command Ansible & chezmoi provisioning that rebuilds a full dev machine from a text file.",
+      repoUrl: "https://github.com/guilyx/setup",
+      visible: true,
+    },
+    {
+      name: "autonomous-uav",
+      description:
+        "2D/3D path planning, cascaded control, and EKF state estimation for autonomous flight.",
+      repoUrl: "https://github.com/guilyx/autonomous-uav",
+      visible: true,
+    },
+    {
+      name: "artin-pathfinding",
+      description:
+        "C++17 pathfinding library (A*, Dijkstra, DFS/BFS) with a clean grid-world interface.",
+      repoUrl: "https://github.com/master-coro/artin-pathfinding",
+      visible: true,
     },
   ],
 

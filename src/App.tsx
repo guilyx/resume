@@ -7,6 +7,7 @@ import {
   Header,
   ProfessionalSummary,
   WorkExperience,
+  Projects,
   Publications,
   EducationSection,
   Skills,
@@ -24,8 +25,17 @@ import { generateResumePdf, toResumeFilename } from "./lib/generatePdf";
  * (e.g. `https://yoursite.com/?download`).
  */
 export default function App() {
-  const { name, title, summary, contact, experience, education, publications, skills } =
-    resumeData;
+  const {
+    name,
+    title,
+    summary,
+    contact,
+    experience,
+    projects,
+    education,
+    publications,
+    skills,
+  } = resumeData;
 
   const hasAutoDownloaded = useRef(false);
 
@@ -63,6 +73,7 @@ export default function App() {
             {/* ---- Sidebar ---- */}
             <aside>
               <Skills skills={skills} />
+              <Projects projects={projects} />
               <EducationSection education={education} />
               <Publications publications={publications} />
             </aside>

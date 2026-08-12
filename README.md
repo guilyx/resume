@@ -45,6 +45,23 @@ Add an entry to the `experience` array:
 }
 ```
 
+### Adding a project
+
+Add an entry to the `projects` array:
+
+```ts
+{
+  name: "my-project",
+  description: "One line on what it does.",
+  repoUrl: "https://github.com/you/my-project",  // optional -- primary link
+  liveUrl: "https://my-project.vercel.app/",     // optional -- deployed page
+  visible: true,                                 // optional -- false hides it
+}
+```
+
+The repository is used as the project's main link; when both are set the deployed
+URL is rendered underneath as a secondary link.
+
 ### Adding a publication
 
 Add an entry to the `publications` array:
@@ -77,6 +94,7 @@ src/
 │   ├── Header.tsx           # Name, title, contact links
 │   ├── ProfessionalSummary.tsx
 │   ├── WorkExperience.tsx   # Job entries with bullets and promotions
+│   ├── Projects.tsx         # Linked personal / open-source projects
 │   ├── Publications.tsx     # Condensed academic publications
 │   ├── EducationSection.tsx # Degree entries
 │   └── Skills.tsx           # Skill pills grouped by category
