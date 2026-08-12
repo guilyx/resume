@@ -232,15 +232,23 @@ export const resumeData: ResumeData = {
   skills: [
     {
       category: "Software Engineering",
-      items: ["C++", "Python", "Go", "React", "Rust", "C", "ROS2"],
+      items: ["C++", "Python", "Go", "Rust", "C", "TypeScript", "React"],
     },
     {
-      category: "Robotics",
-      items: ["Path Planning", "Motion Control", "Sensor Fusion"],
+      category: "Autonomy & Planning",
+      items: [
+        "Multi-Agent Planning",
+        "PDDL Planning",
+        "Behavior Trees",
+        "Path Planning",
+        "Motion Control",
+        "Sensor Fusion",
+        "ROS2",
+      ],
     },
     {
-      category: "AI",
-      items: ["Agentic Stacks", "RAG", "MCP", "LLM APIs"],
+      category: "Agentic AI",
+      items: ["Agent Orchestration", "Graph Workflows", "MCP", "RAG", "LLM APIs"],
     },
     {
       category: "Software Management",
