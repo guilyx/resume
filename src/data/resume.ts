@@ -7,7 +7,7 @@ export const resumeData: ResumeData = {
   title:
     "Lead Architect | Robot Autonomy, Agentic AI Orchestration, Multi-Agent Planning",
   summary:
-    "Lead Architect for robot autonomy and agentic AI orchestration: graph- and tree-based execution engines, multi-agent planning, and the agentic tooling built around them. Experienced in C++, Python, Go. Active contributor to open-source projects and communities.",
+    "Lead Architect for robot autonomy and agentic AI orchestration: graph- and tree-based execution engines, multi-agent planning, and the agentic tooling built around them.",
   contact: {
     email: "erwin.lejeune15@gmail.com",
     portfolio: "https://elejeune.me",
