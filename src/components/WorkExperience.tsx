@@ -49,7 +49,7 @@ function renderBulletText(text: string): ReactNode[] {
 /** Renders a single job entry. */
 function ExperienceEntry({ entry }: { entry: Experience }) {
   return (
-    <div className="mb-5 print:mb-3 last:mb-0">
+    <div className="mb-5 print:mb-3 last:mb-0 print:break-inside-avoid">
       <div className="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-0.5">
         <h3 className="text-sm font-semibold text-primary">{entry.role}</h3>
         <span className="text-xs text-muted whitespace-nowrap">{entry.period}</span>

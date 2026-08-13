@@ -14,7 +14,7 @@ export function EducationSection({ education }: EducationSectionProps) {
     <Section title="Academic History">
       <div className="space-y-3">
         {education.map((entry, idx) => (
-          <div key={idx}>
+          <div key={idx} className="print:break-inside-avoid">
             <div className="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-0.5">
               <h3 className="text-sm font-semibold text-primary">{entry.degree}</h3>
               <span className="text-xs text-muted whitespace-nowrap">{entry.period}</span>

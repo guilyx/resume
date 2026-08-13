@@ -26,7 +26,7 @@ export function Projects({ projects }: ProjectsProps) {
           const secondaryUrl = project.repoUrl ? project.liveUrl : undefined;
 
           return (
-            <li key={idx}>
+            <li key={idx} className="print:break-inside-avoid">
               <p className="text-sm font-semibold text-primary leading-snug inline-flex items-start gap-1.5">
                 {primaryUrl && <Favicon url={primaryUrl} size={13} className="mt-0.5" />}
                 <span>
