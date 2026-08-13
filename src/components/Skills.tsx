@@ -13,7 +13,7 @@ export function Skills({ skills }: SkillsProps) {
     <Section title="Technology">
       <div className="space-y-3">
         {skills.map((group, idx) => (
-          <div key={idx}>
+          <div key={idx} className="print:break-inside-avoid">
             <h3 className="text-xs font-semibold uppercase tracking-wide text-primary mb-1">
               {group.category}
             </h3>

@@ -63,20 +63,24 @@ export default function App() {
         <div className="px-5 py-8 sm:px-10 sm:py-10 md:px-14 md:py-12 print:px-4 print:py-5">
           <Header name={name} title={title} contact={contact} />
 
-          <div className="grid grid-cols-1 md:grid-cols-[1fr_250px] print:grid-cols-[1fr_250px] gap-x-10 print:gap-x-8 gap-y-2 print:gap-y-0">
-            {/* ---- Main column ---- */}
-            <div>
-              <ProfessionalSummary summary={summary} />
-              <WorkExperience experience={experience} />
-            </div>
-
-            {/* ---- Sidebar ---- */}
-            <aside>
+          {/* Print layout is driven by `.resume-columns` in index.css, not by
+              `print:` utilities -- see the note there on grid fragmentation. */}
+          <div className="resume-columns grid grid-cols-1 md:grid-cols-[1fr_250px] gap-x-10 gap-y-2">
+            {/* Sidebar comes first in the DOM so the print layout can float it
+                beside the main column; `order` keeps the main column first on
+                screen, where the grid is in charge. */}
+            <aside className="order-2">
               <Skills skills={skills} />
               <Projects projects={projects} />
               <EducationSection education={education} />
               <Publications publications={publications} />
             </aside>
+
+            {/* ---- Main column ---- */}
+            <div className="resume-main order-1">
+              <ProfessionalSummary summary={summary} />
+              <WorkExperience experience={experience} />
+            </div>
           </div>
         </div>
       </div>

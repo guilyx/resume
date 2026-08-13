@@ -49,8 +49,10 @@
       margin: 6mm;
     }
 
+    /* 11.5px is the largest size at which the full resume still lands on a
+       single A4 sheet; 12px spills the last job entry onto a second page. */
     html.pdf-export {
-      font-size: 12px;
+      font-size: 11.5px;
     }
 
     body {
@@ -65,5 +67,34 @@
       box-shadow: none;
       border-radius: 0;
     }
+  }
+}
+
+/*
+ * Print column layout.
+ *
+ * Chromium cannot fragment a grid (or flex) container across printed pages: as
+ * soon as the two columns are taller than one page, the whole container is
+ * pushed to page 2 and the header is left alone on page 1. Floats do fragment,
+ * so print drops to block flow with the sidebar floated beside the main column.
+ *
+ * Deliberately unlayered: Tailwind's `utilities` layer would otherwise win over
+ * these rules and restore `display: grid`.
+ */
+@media print {
+  .resume-columns {
+    display: block;
+  }
+
+  .resume-columns > aside {
+    float: right;
+    width: 250px;
+    margin-left: 2rem;
+  }
+
+  /* Hold the main column to its own width so its text sits beside the floated
+     sidebar instead of wrapping underneath it once the sidebar ends. */
+  .resume-columns > .resume-main {
+    width: calc(100% - 250px - 2rem);
   }
 }
