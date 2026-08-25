@@ -178,7 +178,7 @@ export const resumeData: ResumeData = {
       visible: true,
     },
     {
-      name: "autonomous-uav-guide",
+      name: "flybots",
       description:
         "Multirotor, fixed-wing and VTOL flight models with 40+ runnable simulations and an RL gym.",
       repoUrl: "https://github.com/guilyx/flybots",
