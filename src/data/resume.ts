@@ -16,25 +16,6 @@ export const resumeData: ResumeData = {
 
   experience: [
     {
-      company: "SIRB.AI",
-      companyUrl: "https://sirb.ai/",
-      location: "Abu Dhabi",
-      role: "Lead Robotics Engineer",
-      period: "2026 - Present",
-      visible: true,
-      bullets: [
-        {
-          text: "Lead the autonomy team at a defense-technology startup spun off from Technology Innovation Institute (TII).",
-        },
-        {
-          text: "Agentic generation of missions for surveillance, monitoring, and tail chasing.",
-        },
-        {
-          text: "Architecture and algorithm development for decentralized swarm control and multi-agent planning.",
-        },
-      ],
-    },
-    {
       company: "Technology Innovation Institute",
       companyUrl: "https://www.tii.ae/",
       location: "Abu Dhabi",
@@ -54,13 +35,25 @@ export const resumeData: ResumeData = {
     },
     {
       company: "Unchained Labs",
-      companyUrl: "https://unchainlabs.xyz/",
-      role: "Principal Solutions Engineer",
+      companyUrl: "https://unchainedlabs.dev/",
+      role: "Founder",
       period: "2024 - Present",
       visible: true,
       bullets: [
         {
-          text: "Developed Agentic AI tools for [automated documentation PRs](https://doxmosis.vercel.app/), [agentic orchestration](https://kymatics.vercel.app/), agentic contribution analysis, real-estate analysis & UAE defense data analysis.",
+          text: "Founded an agentic AI lab built on one bet: the useful unit of agent work is a graph, not a chat. Ship the product that runs agents, and the tooling needed to run it correctly.",
+        },
+        {
+          text: "Built [Kymatics](https://kymatics.vercel.app/), a voice-first agentic platform: speech I/O and turn-taking (Python, FastAPI), a Rust orchestration engine (axum, Postgres, Redis) running queued agent jobs in isolated workspaces with per-job cost tracking, and a live Kanban frontend (React, TypeScript).",
+        },
+        {
+          text: "Open-sourced agent-workflow tooling: static analysis ([graphlint](https://unchained-labs.github.io/graphlint/)), pre-run cost estimation ([preflight](https://unchained-labs.github.io/preflight/)), verifier-independence statistics ([decorrelate](https://unchained-labs.github.io/decorrelate/)), an authorization-gap scanner ([authsweep](https://unchained-labs.github.io/authsweep/)), and a Claude Code session dashboard ([localflow](https://unchained-labs.github.io/localflow/)).",
+        },
+        {
+          text: "Built [soif](https://unchained-labs.github.io/soif-app/), a library, MCP server and dashboard estimating the freshwater footprint of LLM usage.",
+        },
+        {
+          text: "Developed Agentic AI tools for [automated documentation PRs](https://doxmosis.vercel.app/), agentic contribution analysis, real-estate analysis & UAE defense data analysis.",
         },
         {
           text: "Developed production backend services for [LoopFi](https://loopfi.xyz/)'s blockchain data analysis on EVM chains.",
