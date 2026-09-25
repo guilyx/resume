@@ -16,24 +16,6 @@ export const resumeData: ResumeData = {
 
   experience: [
     {
-      company: "Stealth Startup",
-      location: "Abu Dhabi",
-      role: "Lead Robotics Engineer",
-      period: "2026 - Present",
-      visible: true,
-      bullets: [
-        {
-          text: "Lead the autonomy team at a defense-technology startup.",
-        },
-        {
-          text: "Agentic generation of missions for surveillance, monitoring, and tail chasing.",
-        },
-        {
-          text: "Architecture and algorithm development for decentralized swarm control and multi-agent planning.",
-        },
-      ],
-    },
-    {
       company: "Technology Innovation Institute",
       companyUrl: "https://www.tii.ae/",
       location: "Abu Dhabi",
@@ -53,7 +35,7 @@ export const resumeData: ResumeData = {
     },
     {
       company: "Unchained Labs",
-      companyUrl: "https://unchained-labs.github.io/",
+      companyUrl: "https://unchainedlabs.dev/",
       role: "Founder",
       period: "2024 - Present",
       visible: true,
