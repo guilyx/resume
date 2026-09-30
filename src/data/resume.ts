@@ -30,6 +30,9 @@ export const resumeData: ResumeData = {
           text: "Overhauled the swarm autonomy architecture, cutting onboard CPU usage by 74% and network bandwidth by 52%.",
         },
         {
+          text: "Led autonomy demos to companies in Europe and the UAE, resulting in USD 10M+ in contracts.",
+        },
+        {
           text: "Started building AI tooling for the team to raise engineering efficiency and productivity.",
         },
       ],
