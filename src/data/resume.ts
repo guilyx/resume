@@ -65,7 +65,7 @@ export const resumeData: ResumeData = {
       visible: true,
       bullets: [
         {
-          text: "Led the implementation of the decentralized framework used to develop and run multi-drone missions, with each drone running and switching between multiple behaviors.",
+          text: "Led the software architecture and implementation of the decentralized framework used to develop and run multi-drone missions, built on behavior trees and task orchestration so each drone runs and switches between multiple behaviors.",
         },
         {
           text: "Ran the live demos to partners; the project led to USD 3M in contracts with other companies in the UAE ecosystem.",
