@@ -36,7 +36,7 @@ export const resumeData: ResumeData = {
       companyUrl: "https://www.tii.ae/",
       location: "Abu Dhabi",
       role: "Senior Robotics Software Engineer",
-      period: "2023 - 2026",
+      period: "2024 - 2026",
       visible: true,
       bullets: [
         {
@@ -52,7 +52,7 @@ export const resumeData: ResumeData = {
       companyUrl: "https://www.tii.ae/",
       location: "Abu Dhabi",
       role: "Robotics Software Engineer",
-      period: "2022 - 2023",
+      period: "2022 - 2024",
       visible: true,
       bullets: [
         {
