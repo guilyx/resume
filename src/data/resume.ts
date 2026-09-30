@@ -29,6 +29,9 @@ export const resumeData: ResumeData = {
         {
           text: "Overhauled the swarm autonomy architecture, cutting onboard CPU usage by 74% and network bandwidth by 52%.",
         },
+        {
+          text: "Started building AI tooling for the team to raise engineering efficiency and productivity.",
+        },
       ],
     },
     {
@@ -40,10 +43,13 @@ export const resumeData: ResumeData = {
       visible: true,
       bullets: [
         {
-          text: "Scaled the multi-drone framework: modular architecture, lifecycle management and behavior orchestration.",
+          text: "Scaled the multi-drone framework (modular architecture, lifecycle management, behavior orchestration) and built tooling around it to make missions more reliable and repeatable.",
         },
         {
-          text: "Designed and added new swarm behaviors, including decentralized bird-inspired flocking published at IEEE/RSJ IROS 2024.",
+          text: "Expanded the team's scope to own path planning and path tracking, integrated into the framework.",
+        },
+        {
+          text: "Designed new swarm behaviors, including decentralized bird-inspired flocking published at IEEE/RSJ IROS 2024.",
         },
       ],
     },
@@ -56,7 +62,10 @@ export const resumeData: ResumeData = {
       visible: true,
       bullets: [
         {
-          text: "Implemented the core of a decentralized framework for multi-drone missions, letting each drone run and switch between multiple behaviors.",
+          text: "Led the implementation of the decentralized framework used to develop and run multi-drone missions, with each drone running and switching between multiple behaviors.",
+        },
+        {
+          text: "Ran the live demos to partners; the project led to USD 3M in contracts with other companies in the UAE ecosystem.",
         },
       ],
     },
