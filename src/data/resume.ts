@@ -10,7 +10,7 @@ export const resumeData: ResumeData = {
     "Robotics software team lead for robot autonomy and agentic AI orchestration: graph- and tree-based execution engines, multi-agent planning, and the agentic tooling built around them.",
   contact: {
     email: "erwin.lejeune15@gmail.com",
-    portfolio: "https://elejeune.me",
+    portfolio: "https://v4.elejeune.me",
     location: "Abu Dhabi, open to relocate",
   },
 
