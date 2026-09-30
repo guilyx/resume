@@ -5,9 +5,9 @@ import type { ResumeData } from "../types/resume";
 export const resumeData: ResumeData = {
   name: "Erwin Lejeune",
   title:
-    "Lead Architect | Robot Autonomy, Agentic AI Orchestration, Multi-Agent Planning",
+    "Team Lead - Robotics Software | Robot Autonomy, Agentic AI Orchestration, Multi-Agent Planning",
   summary:
-    "Lead Architect for robot autonomy and agentic AI orchestration: graph- and tree-based execution engines, multi-agent planning, and the agentic tooling built around them.",
+    "Robotics software team lead for robot autonomy and agentic AI orchestration: graph- and tree-based execution engines, multi-agent planning, and the agentic tooling built around them.",
   contact: {
     email: "erwin.lejeune15@gmail.com",
     portfolio: "https://elejeune.me",
@@ -19,17 +19,44 @@ export const resumeData: ResumeData = {
       company: "Technology Innovation Institute",
       companyUrl: "https://www.tii.ae/",
       location: "Abu Dhabi",
-      role: "Lead Robotics Engineer",
-      period: "2022 - Present",
+      role: "Lead Engineer",
+      period: "2026 - Present",
       visible: true,
-      promotions:
-        "Engineer to Senior Engineer (2023), Senior Engineer to Lead Engineer (2026)",
       bullets: [
         {
-          text: "Leading a Robotics Software team of 9 engineers developing decentralized autonomy frameworks for heterogeneous drone swarms. Subjects span across Autonomy (Navigation, Perception, Orchestration), Infrastructure (DevOps, RobotOps), and Integration of software and firmware into real-world platforms.",
+          text: "Grew and lead a Robotics Software team of 9 engineers across autonomy (navigation, perception, orchestration), infrastructure (DevOps, RobotOps) and platform integration.",
         },
         {
-          text: "Led initiatives on modular software architecture, lifecycle management, and behavior orchestration for swarm autonomy.",
+          text: "Overhauled the swarm autonomy architecture, cutting onboard CPU usage by 74% and network bandwidth by 52%.",
+        },
+      ],
+    },
+    {
+      company: "Technology Innovation Institute",
+      companyUrl: "https://www.tii.ae/",
+      location: "Abu Dhabi",
+      role: "Senior Robotics Software Engineer",
+      period: "2023 - 2026",
+      visible: true,
+      bullets: [
+        {
+          text: "Scaled the multi-drone framework: modular architecture, lifecycle management and behavior orchestration.",
+        },
+        {
+          text: "Designed and added new swarm behaviors, including decentralized bird-inspired flocking published at IEEE/RSJ IROS 2024.",
+        },
+      ],
+    },
+    {
+      company: "Technology Innovation Institute",
+      companyUrl: "https://www.tii.ae/",
+      location: "Abu Dhabi",
+      role: "Robotics Software Engineer",
+      period: "2022 - 2023",
+      visible: true,
+      bullets: [
+        {
+          text: "Implemented the core of a decentralized framework for multi-drone missions, letting each drone run and switch between multiple behaviors.",
         },
       ],
     },
@@ -41,22 +68,10 @@ export const resumeData: ResumeData = {
       visible: true,
       bullets: [
         {
-          text: "Founded an agentic AI lab built on one bet: the useful unit of agent work is a graph, not a chat. Ship the product that runs agents, and the tooling needed to run it correctly.",
+          text: "Build AI brains for companies: local-first agentic systems that run on their own models, data and infrastructure.",
         },
         {
-          text: "Built [Kymatics](https://kymatics.vercel.app/), a voice-first agentic platform: speech I/O and turn-taking (Python, FastAPI), a Rust orchestration engine (axum, Postgres, Redis) running queued agent jobs in isolated workspaces with per-job cost tracking, and a live Kanban frontend (React, TypeScript).",
-        },
-        {
-          text: "Open-sourced agent-workflow tooling: static analysis ([graphlint](https://unchained-labs.github.io/graphlint/)), pre-run cost estimation ([preflight](https://unchained-labs.github.io/preflight/)), verifier-independence statistics ([decorrelate](https://unchained-labs.github.io/decorrelate/)), an authorization-gap scanner ([authsweep](https://unchained-labs.github.io/authsweep/)), and a Claude Code session dashboard ([localflow](https://unchained-labs.github.io/localflow/)).",
-        },
-        {
-          text: "Built [soif](https://unchained-labs.github.io/soif-app/), a library, MCP server and dashboard estimating the freshwater footprint of LLM usage.",
-        },
-        {
-          text: "Developed Agentic AI tools for [automated documentation PRs](https://doxmosis.vercel.app/), agentic contribution analysis, real-estate analysis & UAE defense data analysis.",
-        },
-        {
-          text: "Developed production backend services for [LoopFi](https://loopfi.xyz/)'s blockchain data analysis on EVM chains.",
+          text: "Architect graph-based agent orchestration ([Kymatics](https://kymatics.vercel.app/)) and open-source the tooling to run it reliably.",
         },
       ],
     },
