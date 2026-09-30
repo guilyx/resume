@@ -49,6 +49,9 @@ export const resumeData: ResumeData = {
           text: "Expanded the team's scope to own path planning and path tracking, integrated into the framework.",
         },
         {
+          text: "Joint program with Caltech on their multi-modal robot M4 and their humanoid: worked on outdoor planning and tracking for M4's flying and rolling modalities.",
+        },
+        {
           text: "Designed new swarm behaviors, including decentralized bird-inspired flocking published at IEEE/RSJ IROS 2024.",
         },
       ],
