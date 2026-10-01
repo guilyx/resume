@@ -1,5 +1,6 @@
 // Erwin Lejeune - 2026-02-15
 
+import { formatStars, toRepoSlug, useGithubStars } from "../lib/githubStars";
 import type { Project } from "../types/resume";
 import { Favicon } from "./Favicon";
 import { Section } from "./Section";
@@ -16,6 +17,9 @@ function toDisplayUrl(url: string): string {
 /** Renders a condensed list of personal / open-source projects. */
 export function Projects({ projects }: ProjectsProps) {
   const visibleProjects = projects.filter((project) => project.visible !== false);
+  const stars = useGithubStars(
+    visibleProjects.flatMap((project) => (project.repoUrl ? [project.repoUrl] : [])),
+  );
 
   return (
     <Section title="Projects">
@@ -24,6 +28,8 @@ export function Projects({ projects }: ProjectsProps) {
           // Repository wins as the primary link; the live page is the fallback.
           const primaryUrl = project.repoUrl ?? project.liveUrl;
           const secondaryUrl = project.repoUrl ? project.liveUrl : undefined;
+          const slug = project.repoUrl ? toRepoSlug(project.repoUrl) : null;
+          const starCount = slug ? stars[slug] : undefined;
 
           return (
             <li key={idx} className="print:break-inside-avoid">
@@ -43,6 +49,14 @@ export function Projects({ projects }: ProjectsProps) {
                     project.name
                   )}
                 </span>
+                {starCount !== undefined && (
+                  <span
+                    className="text-xs font-normal text-muted whitespace-nowrap mt-px"
+                    aria-label={`${starCount} GitHub stars`}
+                  >
+                    ★ {formatStars(starCount)}
+                  </span>
+                )}
               </p>
               <p className="text-xs text-muted mt-0.5">{project.description}</p>
               {secondaryUrl && (
