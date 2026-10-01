@@ -63,7 +63,9 @@ async function fetchStars(slug: string): Promise<number | null> {
  * repo with no value at all is simply absent from the result.
  */
 export function useGithubStars(repoUrls: string[]): Record<string, number> {
-  const slugs = [...new Set(repoUrls.map(toRepoSlug).filter((s): s is string => s !== null))];
+  const slugs = [
+    ...new Set(repoUrls.map(toRepoSlug).filter((s): s is string => s !== null)),
+  ];
   const slugKey = slugs.join(",");
 
   const [stars, setStars] = useState<Record<string, number>>(() => {
@@ -79,24 +81,26 @@ export function useGithubStars(repoUrls: string[]): Record<string, number> {
     const now = Date.now();
     const stale = slugKey
       .split(",")
-      .filter((slug) => slug && (!cache[slug] || now - cache[slug].fetchedAt > CACHE_TTL_MS));
+      .filter(
+        (slug) => slug && (!cache[slug] || now - cache[slug].fetchedAt > CACHE_TTL_MS),
+      );
     if (stale.length === 0) return;
 
-    void Promise.all(stale.map(async (slug) => [slug, await fetchStars(slug)] as const)).then(
-      (results) => {
-        if (cancelled) return;
-        const fresh = readCache();
-        const updates: Record<string, number> = {};
-        for (const [slug, count] of results) {
-          if (count === null) continue;
-          fresh[slug] = { stars: count, fetchedAt: now };
-          updates[slug] = count;
-        }
-        if (Object.keys(updates).length === 0) return;
-        writeCache(fresh);
-        setStars((prev) => ({ ...prev, ...updates }));
-      },
-    );
+    void Promise.all(
+      stale.map(async (slug) => [slug, await fetchStars(slug)] as const),
+    ).then((results) => {
+      if (cancelled) return;
+      const fresh = readCache();
+      const updates: Record<string, number> = {};
+      for (const [slug, count] of results) {
+        if (count === null) continue;
+        fresh[slug] = { stars: count, fetchedAt: now };
+        updates[slug] = count;
+      }
+      if (Object.keys(updates).length === 0) return;
+      writeCache(fresh);
+      setStars((prev) => ({ ...prev, ...updates }));
+    });
 
     return () => {
       cancelled = true;
