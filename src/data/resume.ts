@@ -177,6 +177,14 @@ export const resumeData: ResumeData = {
 
   projects: [
     {
+      name: "grip",
+      description:
+        "Git hook that quizzes you on your own diff before you commit or push, with an LLM-graded score and a pass mark.",
+      repoUrl: "https://github.com/guilyx/grip",
+      liveUrl: "https://guilyx.github.io/grip/",
+      visible: true,
+    },
+    {
       name: "pymapf",
       description:
         "Multi-agent planning toolbox on arbitrary graphs: CBS, PIBT, LaCAM, MAPF-LNS, plus multi-agent RL.",
