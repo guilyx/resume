@@ -5,32 +5,35 @@ import type { ResumeData } from "../types/resume";
 export const resumeData: ResumeData = {
   name: "Erwin Lejeune",
   title:
-    "Lead Architect | Robot Autonomy, Agentic AI Orchestration, Multi-Agent Planning",
+    "Team Lead - Robotics Software | Robot Autonomy, Agentic AI Orchestration, Multi-Agent Planning",
   summary:
-    "Lead Architect for robot autonomy and agentic AI orchestration: graph- and tree-based execution engines, multi-agent planning, and the agentic tooling built around them.",
+    "Robotics software team lead for robot autonomy and agentic AI orchestration: graph- and tree-based execution engines, multi-agent planning, and the agentic tooling built around them.",
   contact: {
     email: "erwin.lejeune15@gmail.com",
-    portfolio: "https://elejeune.me",
+    portfolio: "https://v4.elejeune.me",
     location: "Abu Dhabi, open to relocate",
   },
 
   experience: [
     {
-      company: "SIRB.AI",
-      companyUrl: "https://sirb.ai/",
+      company: "Technology Innovation Institute",
+      companyUrl: "https://www.tii.ae/",
       location: "Abu Dhabi",
-      role: "Lead Robotics Engineer",
+      role: "Lead Engineer",
       period: "2026 - Present",
       visible: true,
       bullets: [
         {
-          text: "Lead the autonomy team at a defense-technology startup spun off from Technology Innovation Institute (TII).",
+          text: "Grew and lead a Robotics Software team of 9 engineers across autonomy (navigation, perception, orchestration), infrastructure (DevOps, RobotOps) and platform integration.",
         },
         {
-          text: "Agentic generation of missions for surveillance, monitoring, and tail chasing.",
+          text: "Overhauled the swarm autonomy architecture, cutting onboard CPU usage by 74% and network bandwidth by 52%.",
         },
         {
-          text: "Architecture and algorithm development for decentralized swarm control and multi-agent planning.",
+          text: "Led autonomy demos to companies in Europe and the UAE, resulting in USD 10M+ in contracts.",
+        },
+        {
+          text: "Started building AI tooling for the team to raise engineering efficiency and productivity.",
         },
       ],
     },
@@ -38,32 +41,52 @@ export const resumeData: ResumeData = {
       company: "Technology Innovation Institute",
       companyUrl: "https://www.tii.ae/",
       location: "Abu Dhabi",
-      role: "Lead Robotics Engineer",
-      period: "2022 - Present",
+      role: "Senior Robotics Software Engineer",
+      period: "2024 - 2026",
       visible: true,
-      promotions:
-        "Engineer to Senior Engineer (2023), Senior Engineer to Lead Engineer (2026)",
       bullets: [
         {
-          text: "Leading a Robotics Software team of 9 engineers developing decentralized autonomy frameworks for heterogeneous drone swarms. Subjects span across Autonomy (Navigation, Perception, Orchestration), Infrastructure (DevOps, RobotOps), and Integration of software and firmware into real-world platforms.",
+          text: "Scaled the multi-drone framework (modular architecture, lifecycle management, behavior orchestration) and built tooling around it to make missions more reliable and repeatable.",
         },
         {
-          text: "Led initiatives on modular software architecture, lifecycle management, and behavior orchestration for swarm autonomy.",
+          text: "Expanded the team's scope to own path planning and path tracking, integrated into the framework.",
+        },
+        {
+          text: "Joint program with Caltech on their multi-modal robot M4 and their humanoid: worked on outdoor planning and tracking for M4's flying and rolling modalities.",
+        },
+        {
+          text: "Designed new swarm behaviors, including decentralized bird-inspired flocking published at IEEE/RSJ IROS 2024.",
+        },
+      ],
+    },
+    {
+      company: "Technology Innovation Institute",
+      companyUrl: "https://www.tii.ae/",
+      location: "Abu Dhabi",
+      role: "Robotics Software Engineer",
+      period: "2022 - 2024",
+      visible: true,
+      bullets: [
+        {
+          text: "Led the software architecture and implementation of the decentralized framework used to develop and run multi-drone missions, built on behavior trees and task orchestration so each drone runs and switches between multiple behaviors.",
+        },
+        {
+          text: "Ran the live demos to partners; the project led to USD 3M in contracts with other companies in the UAE ecosystem.",
         },
       ],
     },
     {
       company: "Unchained Labs",
-      companyUrl: "https://unchainlabs.xyz/",
-      role: "Principal Solutions Engineer",
+      companyUrl: "https://unchainedlabs.dev/",
+      role: "Founder",
       period: "2024 - Present",
       visible: true,
       bullets: [
         {
-          text: "Developed Agentic AI tools for [automated documentation PRs](https://doxmosis.vercel.app/), [agentic orchestration](https://kymatics.vercel.app/), agentic contribution analysis, real-estate analysis & UAE defense data analysis.",
+          text: "Build AI brains for companies: local-first agentic systems that run on their own models, data and infrastructure.",
         },
         {
-          text: "Developed production backend services for [LoopFi](https://loopfi.xyz/)'s blockchain data analysis on EVM chains.",
+          text: "Architect graph-based agent orchestration ([Kymatics](https://kymatics.vercel.app/)) and open-source the tooling to run it reliably.",
         },
       ],
     },
@@ -153,6 +176,14 @@ export const resumeData: ResumeData = {
   ],
 
   projects: [
+    {
+      name: "grip",
+      description:
+        "Git hook that quizzes you on your own diff before you commit or push, with an LLM-graded score and a pass mark.",
+      repoUrl: "https://github.com/guilyx/grip",
+      liveUrl: "https://guilyx.github.io/grip/",
+      visible: true,
+    },
     {
       name: "pymapf",
       description:
