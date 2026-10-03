@@ -16,6 +16,28 @@ export const resumeData: ResumeData = {
 
   experience: [
     {
+      company: "SIRB.AI",
+      companyUrl: "https://sirb.ai/",
+      location: "Abu Dhabi",
+      role: "Head of Robotics Software",
+      period: "2026 - Present",
+      visible: true,
+      bullets: [
+        {
+          text: "Joined as founding team: designed the robotics software architecture and set the autonomy roadmap.",
+        },
+        {
+          text: "Built resilient swarm autonomy for GNSS-denied, degraded-comms missions, with self-healing fault recovery.",
+        },
+        {
+          text: "Introduced swarm-wide fault and state recording, feeding ML models that score missions before launch.",
+        },
+        {
+          text: "TII spin-off; launched the Middle East's first AI-powered drone swarm platform at UMEX 2026.",
+        },
+      ],
+    },
+    {
       company: "Technology Innovation Institute",
       companyUrl: "https://www.tii.ae/",
       location: "Abu Dhabi",
