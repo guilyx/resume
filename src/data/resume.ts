@@ -7,7 +7,7 @@ export const resumeData: ResumeData = {
   title:
     "Team Lead - Robotics Software | Robot Autonomy, Agentic AI Orchestration, Multi-Agent Planning",
   summary:
-    "Robotics autonomy leader with 8+ years building software for real robots. Lead teams that architect planning and task-orchestration stacks, then re-architect them to scale: -74% CPU, -52% bandwidth, and USD 13M+ in contracts won through live demos. Now building agentic harnesses that turn robot data into root causes, and self-healing architectures that recover from faults on their own.",
+    "Robotics software engineer and team lead with 8+ years taking autonomy from research to real-world deployment. Specialized in planning, task orchestration and the system architecture that keeps robots reliable outside the lab. Brings applied AI to robotics: agentic tooling that turns robot data into actionable diagnostics, and self-healing autonomy that detects and recovers from failures in the field.",
   contact: {
     email: "erwin.lejeune15@gmail.com",
     portfolio: "https://v4.elejeune.me",
