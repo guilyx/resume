@@ -24,19 +24,16 @@ export const resumeData: ResumeData = {
       visible: true,
       bullets: [
         {
-          text: "Founding team member: designed the robotics software architecture and drive the autonomy roadmap.",
+          text: "Joined as founding team: designed the robotics software architecture and set the autonomy roadmap.",
         },
         {
-          text: "Resilience: swarm autonomy that keeps operating without GNSS and under degraded communications.",
+          text: "Built resilient swarm autonomy for GNSS-denied, degraded-comms missions, with self-healing fault recovery.",
         },
         {
-          text: "Mission intelligence and predictive autonomy: swarm-wide recording of faults, states and lifecycles, feeding ML models that score missions before launch from historical data.",
+          text: "Introduced swarm-wide fault and state recording, feeding ML models that score missions before launch.",
         },
         {
-          text: "Lead self-healing autonomy: fault collection and automated recovery across the swarm.",
-        },
-        {
-          text: "SIRB.AI is a Technology Innovation Institute spin-off that launched the Middle East's first AI-powered autonomous drone swarm platform at UMEX 2026, with its international debut at Eurosatory Paris.",
+          text: "TII spin-off; launched the Middle East's first AI-powered drone swarm platform at UMEX 2026.",
         },
       ],
     },
