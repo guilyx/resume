@@ -74,7 +74,7 @@ export const resumeData: ResumeData = {
       visible: true,
       bullets: [
         {
-          text: "Led the software architecture and implementation of the decentralized framework used to develop and run multi-drone missions, built on behavior trees and task orchestration so each drone runs and switches between multiple behaviors.",
+          text: "Led the research & development of components for multi-robot behavior orchestration, collaboration and control.",
         },
         {
           text: "Designed new swarm behaviors, including decentralized bird-inspired flocking published at IEEE/RSJ IROS 2024.",
