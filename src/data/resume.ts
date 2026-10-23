@@ -27,10 +27,7 @@ export const resumeData: ResumeData = {
           text: "Joined as founding team: designed the robotics software architecture and set the autonomy roadmap.",
         },
         {
-          text: "Built resilient swarm autonomy for GNSS-denied, degraded-comms missions, with self-healing fault recovery.",
-        },
-        {
-          text: "Introduced swarm-wide fault and state recording, feeding ML models that score missions before launch.",
+          text: "Led swarm-wide fault and state recording, feeding on-robot agents that detect and recover from failures, and ML models that score missions before launch.",
         },
         {
           text: "TII spin-off; launched the Middle East's first AI-powered drone swarm platform at UMEX 2026.",
