@@ -19,8 +19,8 @@ export const resumeData: ResumeData = {
       company: "SIRB.AI",
       companyUrl: "https://sirb.ai/",
       location: "Abu Dhabi",
-      role: "Head of Robotics Software",
-      period: "2026 - Present",
+      role: "Head of Robotics",
+      period: "Feb 2026 - Present",
       visible: true,
       bullets: [
         {
@@ -41,15 +41,21 @@ export const resumeData: ResumeData = {
       company: "Technology Innovation Institute",
       companyUrl: "https://www.tii.ae/",
       location: "Abu Dhabi",
-      role: "Lead Engineer",
-      period: "2026 - Present",
+      role: "Team Lead - Robotics Software",
+      period: "2024 - 2026",
       visible: true,
       bullets: [
         {
-          text: "Grew and lead a Robotics Software team of 9 engineers across autonomy (navigation, perception, orchestration), infrastructure (DevOps, RobotOps) and platform integration.",
+          text: "Grew and led a Robotics Software team of 9 engineers across autonomy (navigation, perception, orchestration), infrastructure (DevOps, RobotOps) and platform integration.",
         },
         {
           text: "Overhauled the swarm autonomy architecture, cutting onboard CPU usage by 74% and network bandwidth by 52%.",
+        },
+        {
+          text: "Scaled the framework with tooling for reliable, repeatable missions, and expanded the team's scope to path planning and path tracking.",
+        },
+        {
+          text: "Joint program with Caltech on their multi-modal robot M4 and their humanoid: worked on outdoor planning and tracking for M4's flying and rolling modalities.",
         },
         {
           text: "Led autonomy demos to companies in Europe and the UAE, resulting in USD 10M+ in contracts.",
@@ -63,34 +69,15 @@ export const resumeData: ResumeData = {
       company: "Technology Innovation Institute",
       companyUrl: "https://www.tii.ae/",
       location: "Abu Dhabi",
-      role: "Senior Robotics Software Engineer",
-      period: "2024 - 2026",
-      visible: true,
-      bullets: [
-        {
-          text: "Scaled the multi-drone framework (modular architecture, lifecycle management, behavior orchestration) and built tooling around it to make missions more reliable and repeatable.",
-        },
-        {
-          text: "Expanded the team's scope to own path planning and path tracking, integrated into the framework.",
-        },
-        {
-          text: "Joint program with Caltech on their multi-modal robot M4 and their humanoid: worked on outdoor planning and tracking for M4's flying and rolling modalities.",
-        },
-        {
-          text: "Designed new swarm behaviors, including decentralized bird-inspired flocking published at IEEE/RSJ IROS 2024.",
-        },
-      ],
-    },
-    {
-      company: "Technology Innovation Institute",
-      companyUrl: "https://www.tii.ae/",
-      location: "Abu Dhabi",
-      role: "Robotics Software Engineer",
+      role: "Senior Engineer - Robotics Software",
       period: "2022 - 2024",
       visible: true,
       bullets: [
         {
           text: "Led the software architecture and implementation of the decentralized framework used to develop and run multi-drone missions, built on behavior trees and task orchestration so each drone runs and switches between multiple behaviors.",
+        },
+        {
+          text: "Designed new swarm behaviors, including decentralized bird-inspired flocking published at IEEE/RSJ IROS 2024.",
         },
         {
           text: "Ran the live demos to partners; the project led to USD 3M in contracts with other companies in the UAE ecosystem.",
