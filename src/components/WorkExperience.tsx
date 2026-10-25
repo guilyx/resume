@@ -46,32 +46,54 @@ function renderBulletText(text: string): ReactNode[] {
   return nodes.length > 0 ? nodes : [text];
 }
 
-/** Renders a single job entry. */
-function ExperienceEntry({ entry }: { entry: Experience }) {
+/** Consecutive entries at the same company, newest role first. */
+type CompanyGroup = Experience[];
+
+/** Group consecutive entries sharing a company, LinkedIn style. */
+function groupByCompany(entries: Experience[]): CompanyGroup[] {
+  const groups: CompanyGroup[] = [];
+  for (const entry of entries) {
+    const last = groups[groups.length - 1];
+    if (last && last[0].company === entry.company) {
+      last.push(entry);
+    } else {
+      groups.push([entry]);
+    }
+  }
+  return groups;
+}
+
+/** Overall span of a group: start of its oldest role to end of its newest. */
+function groupPeriod(group: CompanyGroup): string {
+  const newestEnd = group[0].period.split(" - ").pop() ?? group[0].period;
+  const oldestStart = group[group.length - 1].period.split(" - ")[0];
+  return `${oldestStart} - ${newestEnd}`;
+}
+
+function CompanyLine({ entry }: { entry: Experience }) {
   return (
-    <div className="mb-5 print:mb-3 last:mb-0 print:break-inside-avoid">
-      <div className="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-0.5">
-        <h3 className="text-sm font-semibold text-primary">{entry.role}</h3>
-        <span className="text-xs text-muted whitespace-nowrap">{entry.period}</span>
-      </div>
+    <>
+      {entry.companyUrl && <Favicon url={entry.companyUrl} size={13} />}
+      {entry.companyUrl ? (
+        <a
+          href={entry.companyUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="hover:text-accent transition-colors"
+        >
+          {entry.company}
+        </a>
+      ) : (
+        <span>{entry.company}</span>
+      )}
+      {entry.location && <span>, {entry.location}</span>}
+    </>
+  );
+}
 
-      <p className="text-xs text-muted mt-0.5 inline-flex items-center gap-1.5 flex-wrap">
-        {entry.companyUrl && <Favicon url={entry.companyUrl} size={13} />}
-        {entry.companyUrl ? (
-          <a
-            href={entry.companyUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hover:text-accent transition-colors"
-          >
-            {entry.company}
-          </a>
-        ) : (
-          <span>{entry.company}</span>
-        )}
-        {entry.location && <span>, {entry.location}</span>}
-      </p>
-
+function Bullets({ entry }: { entry: Experience }) {
+  return (
+    <>
       {entry.promotions && (
         <p className="text-xs italic text-accent/80 mt-1">{entry.promotions}</p>
       )}
@@ -86,6 +108,50 @@ function ExperienceEntry({ entry }: { entry: Experience }) {
           </li>
         ))}
       </ul>
+    </>
+  );
+}
+
+/** Renders a single job entry. */
+function ExperienceEntry({ entry }: { entry: Experience }) {
+  return (
+    <div className="mb-5 print:mb-3 last:mb-0 print:break-inside-avoid">
+      <div className="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-0.5">
+        <h3 className="text-sm font-semibold text-primary">{entry.role}</h3>
+        <span className="text-xs text-muted whitespace-nowrap">{entry.period}</span>
+      </div>
+
+      <p className="text-xs text-muted mt-0.5 inline-flex items-center gap-1.5 flex-wrap">
+        <CompanyLine entry={entry} />
+      </p>
+
+      <Bullets entry={entry} />
+    </div>
+  );
+}
+
+/** Renders several roles at one company under a single company header. */
+function CompanyEntry({ group }: { group: CompanyGroup }) {
+  return (
+    <div className="mb-5 print:mb-3 last:mb-0">
+      <div className="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-0.5">
+        <h3 className="text-sm font-semibold text-primary inline-flex items-center gap-1.5 flex-wrap">
+          <CompanyLine entry={group[0]} />
+        </h3>
+        <span className="text-xs text-muted whitespace-nowrap">{groupPeriod(group)}</span>
+      </div>
+
+      <div className="mt-2 print:mt-1.5 ml-1.5 pl-3 border-l border-accent/30 space-y-3 print:space-y-2">
+        {group.map((entry, idx) => (
+          <div key={idx} className="print:break-inside-avoid">
+            <div className="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-0.5">
+              <h4 className="text-sm font-medium text-primary">{entry.role}</h4>
+              <span className="text-xs text-muted whitespace-nowrap">{entry.period}</span>
+            </div>
+            <Bullets entry={entry} />
+          </div>
+        ))}
+      </div>
     </div>
   );
 }
@@ -96,9 +162,13 @@ export function WorkExperience({ experience }: WorkExperienceProps) {
 
   return (
     <Section title="Work Experience">
-      {visibleEntries.map((entry, idx) => (
-        <ExperienceEntry key={idx} entry={entry} />
-      ))}
+      {groupByCompany(visibleEntries).map((group, idx) =>
+        group.length > 1 ? (
+          <CompanyEntry key={idx} group={group} />
+        ) : (
+          <ExperienceEntry key={idx} entry={group[0]} />
+        ),
+      )}
     </Section>
   );
 }
