@@ -272,43 +272,27 @@ export const resumeData: ResumeData = {
   skills: [
     {
       category: "Software Engineering",
-      items: ["C++", "Python", "Go", "Rust", "C", "TypeScript", "React"],
+      items: ["C++", "Python", "Go", "Rust", "TypeScript"],
     },
     {
       category: "Autonomy & Planning",
       items: [
-        "Multi-Agent Planning",
-        "PDDL Planning",
+        "ROS 2",
         "Behavior Trees",
+        "Multi-Agent Planning",
         "Path Planning",
         "Motion Control",
-        "Sensor Fusion",
         "Fleet Management",
         "Fault Management",
-        "ROS2",
       ],
     },
     {
       category: "Agentic AI",
-      items: [
-        "Agent Orchestration",
-        "AI Code Review",
-        "Graph Workflows",
-        "MCP",
-        "RAG",
-        "LLM APIs",
-      ],
+      items: ["Agent Orchestration", "AI Code Review", "MCP", "RAG"],
     },
     {
-      category: "Leadership & Management",
-      items: [
-        "Team Building",
-        "Roadmaps",
-        "Performance Reviews",
-        "Code Review",
-        "Scrum",
-        "Jira",
-      ],
+      category: "Leadership",
+      items: ["Team Building", "Roadmaps", "Performance Reviews", "Code Review"],
     },
   ],
 };

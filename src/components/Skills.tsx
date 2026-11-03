@@ -11,17 +11,17 @@ interface SkillsProps {
 export function Skills({ skills }: SkillsProps) {
   return (
     <Section title="Technology">
-      <div className="space-y-3">
+      <div className="space-y-2">
         {skills.map((group, idx) => (
           <div key={idx} className="print:break-inside-avoid">
-            <h3 className="text-xs font-semibold uppercase tracking-wide text-primary mb-1">
+            <h3 className="text-[11px] font-semibold uppercase tracking-wide text-primary mb-0.5">
               {group.category}
             </h3>
-            <div className="flex flex-wrap gap-1.5">
+            <div className="flex flex-wrap gap-1">
               {group.items.map((item) => (
                 <span
                   key={item}
-                  className="inline-block rounded-full bg-surface px-2.5 py-0.5 text-xs text-primary/80 border border-divider"
+                  className="inline-block rounded-full bg-surface px-2 py-px text-[11px] text-primary/80 border border-divider"
                 >
                   {item}
                 </span>
