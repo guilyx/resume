@@ -5,9 +5,9 @@ import type { ResumeData } from "../types/resume";
 export const resumeData: ResumeData = {
   name: "Erwin Lejeune",
   title:
-    "Team Lead - Robotics Software | Robot Autonomy, Agentic AI Orchestration, Multi-Agent Planning",
+    "Head of Robotics | Robot Autonomy, Fleet & Fault Management, Agentic AI Workflows",
   summary:
-    "Robotics software engineer and team lead with 8+ years taking autonomy from research to real-world deployment. Specialized in planning, task orchestration and the system architecture that keeps robots reliable outside the lab. Brings applied AI to robotics: agentic tooling that turns robot data into actionable diagnostics, and self-healing autonomy that detects and recovers from failures in the field.",
+    "Robotics technical lead taking autonomy from the lab to the field, with 8+ years across AMR navigation, fleet management and fault management, and robotics products shipped end to end. Builds teams from scratch and runs them: roadmaps, performance reviews, and hands-on design and pull request reviews. Brings AI in without lowering the bar: workflows that make a whole team faster, and on-robot agents that diagnose faults while deterministic rules stay in control.",
   contact: {
     email: "erwin.lejeune15@gmail.com",
     portfolio: "https://v4.elejeune.me",
@@ -24,10 +24,13 @@ export const resumeData: ResumeData = {
       visible: true,
       bullets: [
         {
-          text: "Joined as founding team: designed the robotics software architecture and set the autonomy roadmap.",
+          text: "Founding team: built the robotics team from scratch; own the software architecture, roadmap and performance reviews.",
         },
         {
-          text: "Built a self-healing autonomy layer: swarm-wide fault and state recording, agents that detect and recover from failures, and ML-based mission scoring before launch.",
+          text: "Built swarm-wide fault management: fault and state recording, ML-based mission scoring before launch, and agents that read the fault timeline and propose repairs while deterministic rules keep control of the actuators.",
+        },
+        {
+          text: "Led the team's AI workflows: a Slack company brain that answers from sources each team curates, and self-hosted AI code reviews on every change, with a person owning everything that ships.",
         },
         {
           text: "Took the autonomy stack from prototype to public launch at UMEX 2026, unveiled as the Middle East's first AI-powered swarm platform.",
@@ -269,27 +272,27 @@ export const resumeData: ResumeData = {
   skills: [
     {
       category: "Software Engineering",
-      items: ["C++", "Python", "Go", "Rust", "C", "TypeScript", "React"],
+      items: ["C++", "Python", "Go", "Rust", "TypeScript"],
     },
     {
       category: "Autonomy & Planning",
       items: [
-        "Multi-Agent Planning",
-        "PDDL Planning",
+        "ROS 2",
         "Behavior Trees",
+        "Multi-Agent Planning",
         "Path Planning",
         "Motion Control",
-        "Sensor Fusion",
-        "ROS2",
+        "Fleet Management",
+        "Fault Management",
       ],
     },
     {
       category: "Agentic AI",
-      items: ["Agent Orchestration", "Graph Workflows", "MCP", "RAG", "LLM APIs"],
+      items: ["Agent Orchestration", "AI Code Review", "MCP", "RAG"],
     },
     {
-      category: "Software Management",
-      items: ["Scrum", "Jira", "Github", "Gitlab"],
+      category: "Leadership",
+      items: ["Team Building", "Roadmaps", "Performance Reviews", "Code Review"],
     },
   ],
 };
