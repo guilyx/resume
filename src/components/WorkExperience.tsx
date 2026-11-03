@@ -74,19 +74,21 @@ function CompanyLine({ entry }: { entry: Experience }) {
   return (
     <>
       {entry.companyUrl && <Favicon url={entry.companyUrl} size={13} />}
-      {entry.companyUrl ? (
-        <a
-          href={entry.companyUrl}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="hover:text-accent transition-colors"
-        >
-          {entry.company}
-        </a>
-      ) : (
-        <span>{entry.company}</span>
-      )}
-      {entry.location && <span>, {entry.location}</span>}
+      <span>
+        {entry.companyUrl ? (
+          <a
+            href={entry.companyUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-accent transition-colors"
+          >
+            {entry.company}
+          </a>
+        ) : (
+          entry.company
+        )}
+        {entry.location && `, ${entry.location}`}
+      </span>
     </>
   );
 }
